@@ -1,0 +1,28 @@
+From 563afbc51baa47e2bd5aece37641f611f477676b Mon Sep 17 00:00:00 2001
+From: SamarV-121 <samarvispute121@gmail.com>
+Date: Sun, 20 Dec 2015 14:54:55 +0600
+Subject: [PATCH] mtk: inputless ussd support
+
+Generic MediaTek chips handle USSD weirdly.
+---
+ src/java/com/android/internal/telephony/gsm/GSMPhone.java | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+diff --git a/src/java/com/android/internal/telephony/gsm/GSMPhone.java b/src/java/com/android/internal/telephony/gsm/GSMPhone.java
+index 82ae9f4..0ba62bb 100644
+--- a/src/java/com/android/internal/telephony/gsm/GSMPhone.java
++++ b/src/java/com/android/internal/telephony/gsm/GSMPhone.java
+@@ -1475,7 +1475,12 @@ private void updateCallForwardStatus() {
+             // Complete pending USSD
+ 
+             if (isUssdRelease) {
+-                found.onUssdRelease();
++                // MTK weirdness
++                if(ussdMessage != null) {
++                    found.onUssdFinished(ussdMessage, isUssdRequest);
++                } else {
++                    found.onUssdRelease();
++                }
+             } else if (isUssdError) {
+                 found.onUssdFinishedError();
+             } else {
