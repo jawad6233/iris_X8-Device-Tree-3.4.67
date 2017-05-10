@@ -38,9 +38,7 @@ BOARD_KERNEL_PAGESIZE := 2048
 #TARGET_KERNEL_CONFIG := 2014011_debug_defconfig
 #TARGET_KERNEL_SOURCE := Lava/iris_x8\
 TARGET_PREBUILT_KERNEL := device/Lava/iris_x8/kernel
-BOARD_CUSTOM_BOOTIMG_MK := device/Lava/iris_x8/bootimg.mk
 BOARD_CUSTOM_BOOTIMG := true
-
 TARGET_KMODULES := true
 
 # Assert
