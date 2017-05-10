@@ -38,7 +38,7 @@ Based on Stock Kitkat kernel (3.4.67)
   * . apply.sh 
   * source build/envsetup.sh
   * breakfast iris_x8
-  * make iris_x8
+  * brunch iris_x8
   * Done :)
   
   # Credits/Thanks to:-
