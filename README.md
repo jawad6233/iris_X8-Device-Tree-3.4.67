@@ -32,8 +32,8 @@ Based on Stock Kitkat kernel (3.4.67)
 
   * repo init -u git://github.com/LineageOS/android.git -b cm-13.0
   * repo sync
-  * git clone git@github.com:SamarV-121/android_device_iris_x8-lineage-13.0.git -b master device/Lava/iris_x8
-  * git clone git@github.com:SamarV-121/android_vendor_iris_x8-lineage-13.0.git -b master vendor/Lava
+  * git clone https://github.com/SamarV-121/android_device_iris_x8-lineage-13.0.git -b master device/Lava/iris_x8
+  * git clone https://github.com/SamarV-121/android_vendor_iris_x8-lineage-13.0.git -b master vendor/Lava/iris_x8
   * cd device/Lava/iris_x8/patches
   * . apply.sh 
   * source build/envsetup.sh
