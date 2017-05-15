@@ -156,8 +156,6 @@ PRODUCT_PACKAGES+=\
 PRODUCT_PACKAGES += \
     Snap
 
-$(call inherit-product, build/target/product/full.mk)
-
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_NAME := full_iris_x8
 PRODUCT_DEVICE := iris_x8
