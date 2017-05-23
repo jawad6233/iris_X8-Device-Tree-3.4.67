@@ -1,9 +1,7 @@
  #!/bin/bash
  cd ../../../..
  cd system/core
- patch -p1 < ../../device/Lava/iris_x8/patches/core1.patch
- patch -p1 < ../../device/Lava/iris_x8/patches/core2.patch
- patch -p1 < ../../device/Lava/iris_x8/patches/core3.patch
+ patch -p1 < ../../device/Lava/iris_x8/patches/core.patch
  cd ..
  cd bt
  patch -p1 < ../../device/Lava/iris_x8/patches/bt.patch
