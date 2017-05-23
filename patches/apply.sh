@@ -30,6 +30,9 @@
  cd opt/te*
  patch -p1 < ../../device/Lava/iris_x8/patches/te1.patch
  patch -p1 < ../../device/Lava/iris_x8/patches/te2.patch
+ patch -p1 < ../../device/Lava/iris_x8/patches/te3.patch
+ patch -p1 < ../../device/Lava/iris_x8/patches/te4.patch
+
  cd ../../..
  cd exte*/sepolicy
  patch -p1 < ../../device/Lava/iris_x8/patches/sepolicy.patch
