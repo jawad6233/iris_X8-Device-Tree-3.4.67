@@ -1,11 +1,12 @@
- #!/bin/bash
+  #!/bin/bash
  cd ../../../..
  cd system/core
- patch -p1 < ../../device/Lava/iris_x8/patches/core1.patch
- patch -p1 < ../../device/Lava/iris_x8/patches/core2.patch
- patch -p1 < ../../device/Lava/iris_x8/patches/core3.patch
- cd ..
- cd bt
+ patch -p1 < ../../device/Lava/iris_x8/patches/core.patch
+ cd ../..
+ cd packages/apps/Settings
+ patch -p1 < ../../device/Lava/iris_x8/patches/author_info.patch
+ cd ../../..
+ cd system*/bt
  patch -p1 < ../../device/Lava/iris_x8/patches/bt.patch
  cd ..
  cd net*
@@ -27,9 +28,8 @@
  cd native
  patch -p1 < ../../device/Lava/iris_x8/patches/native.patch
  cd ..
- cd opt/te*
- patch -p1 < ../../device/Lava/iris_x8/patches/te1.patch
- patch -p1 < ../../device/Lava/iris_x8/patches/te2.patch
+ cd opt/te*/
+ patch -p1 < ../../device/Lava/iris_x8/patches/telephony.patch
  cd ../../..
  cd exte*/sepolicy
  patch -p1 < ../../device/Lava/iris_x8/patches/sepolicy.patch
