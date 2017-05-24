@@ -47,3 +47,29 @@ index faff763..4ea36cb 100644
              return -1;
          }
      } while (0);
+
+From 266d74c24840c269fcf7f1da1d83f11a02d26060 Mon Sep 17 00:00:00 2001
+From: LineageOS-MTK <luzejij@binka.me>
+Date: Thu, 18 May 2017 22:21:50 +0300
+Subject: [PATCH] Correcting the incorrect display of the name of a removable
+ card
+
+---
+ Utils.cpp | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/Utils.cpp b/Utils.cpp
+index b3f8b92..d1d57e0 100644
+--- a/Utils.cpp
++++ b/Utils.cpp
+@@ -174,6 +174,10 @@ status_t BindMount(const std::string& source, const std::string& target) {
+ 
+ static status_t readMetadata(const std::string& path, std::string& fsType,
+         std::string& fsUuid, std::string& fsLabel, bool untrusted) {
++    fsType.clear();
++    fsUuid.clear();
++    fsLabel.clear();
++
+ #ifdef MINIVOLD
+     char *val = NULL;
+     val = blkid_get_tag_value(NULL, "TYPE", path.c_str());
