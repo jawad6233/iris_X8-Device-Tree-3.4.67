@@ -2,8 +2,11 @@
  cd ../../../..
  cd system/core
  patch -p1 < ../../device/Lava/iris_x8/patches/core.patch
- cd ..
- cd bt
+ cd ../..
+ cd packages/apps/Settings
+ patch -p1 < ../../device/Lava/iris_x8/patches/author_info.patch
+ cd ../../..
+ cd system*/bt
  patch -p1 < ../../device/Lava/iris_x8/patches/bt.patch
  cd ..
  cd net*
@@ -30,7 +33,6 @@
  patch -p1 < ../../device/Lava/iris_x8/patches/te2.patch
  patch -p1 < ../../device/Lava/iris_x8/patches/te3.patch
  patch -p1 < ../../device/Lava/iris_x8/patches/te4.patch
-
  cd ../../..
  cd exte*/sepolicy
  patch -p1 < ../../device/Lava/iris_x8/patches/sepolicy.patch
