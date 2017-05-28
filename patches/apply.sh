@@ -4,7 +4,7 @@
  patch -p1 < ../../device/Lava/iris_x8/patches/core.patch
  cd ../..
  cd packages/apps/Settings
- patch -p1 < ../../device/Lava/iris_x8/patches/author_info.patch
+ patch -p1 < ../../../device/Lava/iris_x8/patches/author_info.patch
  cd ../../..
  cd system*/bt
  patch -p1 < ../../device/Lava/iris_x8/patches/bt.patch
@@ -29,7 +29,7 @@
  patch -p1 < ../../device/Lava/iris_x8/patches/native.patch
  cd ..
  cd opt/te*/
- patch -p1 < ../../device/Lava/iris_x8/patches/telephony.patch
+ patch -p1 < ../../../device/Lava/iris_x8/patches/telephony.patch
  cd ../../..
  cd exte*/sepolicy
  patch -p1 < ../../device/Lava/iris_x8/patches/sepolicy.patch
