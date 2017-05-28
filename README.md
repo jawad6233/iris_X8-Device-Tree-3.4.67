@@ -52,6 +52,7 @@ Based on Stock Kitkat kernel (3.4.67)
   * Santhosh M
   * ariafan
   * hyperion70
+  * tribetmen
   * CyanogenMod Team
   * Tirth Patel
   * Kishan Patel
